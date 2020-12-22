@@ -1,0 +1,42 @@
+@import '../../styles/restet.less';
+
+.tShirt {
+  display: flex;
+  flex-direction: row;
+
+  //! LEFT SIDE
+  .tShirt-left-side {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    .tShirt-left-side-size {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .tShirt-left-side-endButton {}
+  }
+
+  //! RIGHT SIDE
+  .tShirt-right-side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    .tShirt-right-side-bigImage {}
+
+    .tShirt-right-side-smallerImage {
+      display: flex;
+      flex-direction: row;
+      .active {
+        color: red;
+      }
+    }
+
+    .tShirt-right-side-choseImage {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}

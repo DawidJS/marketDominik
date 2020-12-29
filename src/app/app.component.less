@@ -6,8 +6,9 @@
   flex-direction: row;
 
   .web-top {
-    width: 100%;
+    min-width: calc(100vw - 60px);
     height: 60px;
+    position: relative;
   }
 
   .web-right {
@@ -20,5 +21,7 @@
     min-height: calc(100vh - 60px);
     background-image: url(../assets/bg.svg);
     background-size: cover;
+    position: absolute;
+    top: 60px;
   }
 }

@@ -23,7 +23,7 @@
         <p class="tShirt-left-side-size-p"> XS S M L XL</p>
       </div>
       <div>
-        <h3 class="tShirt-left-side-size-tabel">TABELE ROZMIARÓW</h3>
+        <h3 class="tShirt-left-side-size-tabel"><a>TABELE ROZMIARÓW</a></h3>
       </div>
     </div>
   </div>
@@ -40,11 +40,16 @@
     <!--* smaller image -->
     <div class="tShirt-right-side-choseImage">
       <a class="tShirt-arrow-left"><img src="../../../assets/Vector.png" alt="left"></a>
-      <a (click)='choseNumber(1)'><div [ngClass]='{"active": number==1}'><img src="../../../assets/image 15.png" alt="small IMAGE1"></div></a>
-      <a (click)='choseNumber(2)'><div [ngClass]='{"active": number==2}'><img src="../../../assets/image 16.png" alt="small IMAGE1"></div></a>
-      <a (click)='choseNumber(3)'><div [ngClass]='{"active": number==3}'><img src="../../../assets/image 17.png" alt="small IMAGE1"></div></a>
+      <a (click)='choseNumber(1)'>
+        <div [ngClass]='{"active": number==1}'><img src="../../../assets/image 15.png" alt="small IMAGE1"></div>
+      </a>
+      <a (click)='choseNumber(2)'>
+        <div [ngClass]='{"active": number==2}'><img src="../../../assets/image 16.png" alt="small IMAGE1"></div>
+      </a>
+      <a (click)='choseNumber(3)'>
+        <div [ngClass]='{"active": number==3}'><img src="../../../assets/image 17.png" alt="small IMAGE1"></div>
+      </a>
       <a class="tShirt-arrow-right"><img src="../../../assets/Vector (1).png" alt="right"></a>
     </div>
   </div>
 </section>
-

@@ -4,15 +4,18 @@
   display: flex;
   flex-direction: row;
   font-family: Saira;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: space-around;
 
   //! LEFT SIDE
   .tShirt-left-side {
     display: flex;
     flex-direction: column;
-    width: 50%;
 
     .tShirt-left-side-mainInfo {
       width: 426px;
+
       h2 {
         color: #E5E5E5;
         font-weight: 500px;
@@ -94,24 +97,29 @@
 
   //! RIGHT SIDE
   .tShirt-right-side {
-    width: 50%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     .tShirt-right-side-bigImage {}
 
     .tShirt-right-side-smallerImage {
       display: flex;
       flex-direction: row;
-
-      .active {
-        color: red;
-      }
     }
 
     .tShirt-right-side-choseImage {
       display: flex;
       flex-direction: row;
+      align-items: center;
+
+      .tShirt-arrow-left {
+        margin-right: 25px;
+      }
+
+      .tShirt-arrow-right {
+        margin-left: 25px;
+      }
     }
   }
 }

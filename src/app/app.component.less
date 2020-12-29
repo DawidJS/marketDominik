@@ -4,12 +4,21 @@
 .web-container {
   display: flex;
   flex-direction: row;
-  min-height: 100vh;
-  background-image: url(../assets/bg.svg);
-  background-size: cover;
-  // background-repeat: no-repeat;
 
-  .social {
-    min-height: 100vh;
+  .web-top {
+    width: 100%;
+    height: 60px;
+  }
+
+  .web-right {
+    width: 60px;
+    height: 100vh;
+  }
+
+  .web-bottom {
+    min-width: calc(100vw - 60px);
+    min-height: calc(100vh - 60px);
+    background-image: url(../assets/bg.svg);
+    background-size: cover;
   }
 }

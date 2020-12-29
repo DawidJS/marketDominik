@@ -1,27 +1,26 @@
 <section class="tShirt">
   <!--! LEFT SIDE -->
   <div class="tShirt-left-side">
-    <h2>T-SHIRT</h2>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi ullam aspernatur qui possimus sapiente nobis
-      libero ipsum eaque. Reiciendis iusto blanditiis non aut perspiciatis laboriosam voluptas voluptatem expedita
-      itaque quidem!</p>
-    <!-- SIZE -->
-    <div class="tShirt-left-side-size">
-      <div>
-        <h3>Dostępne rozmiary</h3>
-        <p> XS S M L XL</p>
-      </div>
-      <div>
-        <h3>Dostepne kolory</h3>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-      </div>
+    <div class="tShirt-left-side-mainInfo">
+      <h2 class="tShirt-left-side-mainH">T-SHIRT</h2>
+      <p class="tShirt-left-side-mainP">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi ullam
+        aspernatur qui possimus sapiente nobis
+        libero ipsum eaque. Reiciendis iusto blanditiis non aut perspiciatis laboriosam voluptas voluptatem expedita
+        itaque quidem!</p>
     </div>
+    <!-- SIZE -->
     <div class="tShirt-left-side-endButton">
       <button class="tShiirt-left-side-firtsButton">POPROŚ O WYCENĘ</button>
-      <button>Zobacz realizacje</button>
+      <button class="tShiirt-left-side-secendButton">Zobacz realizacje</button>
+    </div>
+    <div class="tShirt-left-side-size">
+      <div>
+        <h3 class="tShirt-left-side-size-sizer">Dostępne rozmiary</h3>
+        <p class="tShirt-left-side-size-p"> XS S M L XL</p>
+      </div>
+      <div>
+        <h3 class="tShirt-left-side-size-tabel">TABELE ROZMIARÓW</h3>
+      </div>
     </div>
   </div>
   <!--! RIGHT SIDE -->
@@ -29,16 +28,16 @@
     <!--* big image -->
     <div class="tShirt-right-side-bigImage">
       <div [ngSwitch]='number'>
-        <div *ngSwitchCase=" '1' "><img src="" alt="BIG IMAGE1"></div>
-        <div *ngSwitchCase=" '2' "><img src="" alt="BIG IMAGE2"></div>
-        <div *ngSwitchCase=" '3' "><img src="" alt="BIG IMAGE3"></div>
+        <div *ngSwitchCase=" '1' "><img src="../../../assets/image 13.png" alt="BIG IMAGE1"></div>
+        <div *ngSwitchCase=" '2' "><img src="../../../assets/image 13.png" alt="BIG IMAGE2"></div>
+        <div *ngSwitchCase=" '3' "><img src="../../../assets/image 13.png" alt="BIG IMAGE3"></div>
       </div>
     </div>
     <!--* smaller image -->
     <div class="tShirt-right-side-smallerImage">
-      <div [ngClass]='{"active": number==1}'><img src="" alt="small IMAGE1">aa</div>
-      <div [ngClass]='{"active": number==2}'><img src="" alt="small IMAGE2">bb</div>
-      <div [ngClass]='{"active": number==3}'><img src="" alt="small IMAGE3">cc</div>
+      <div [ngClass]='{"active": number==1}'><img src="../../../assets/image 15.png" alt="small IMAGE1">aa</div>
+      <div [ngClass]='{"active": number==2}'><img src="../../../assets/image 16.png" alt="small IMAGE2">bb</div>
+      <div [ngClass]='{"active": number==3}'><img src="../../../assets/image 17.png" alt="small IMAGE3">cc</div>
     </div>
     <div class="tShirt-right-side-choseImage">
       <button (click)='choseNumber(1)'>1</button>

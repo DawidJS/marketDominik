@@ -108,12 +108,119 @@
     flex-direction: column;
     align-items: center;
 
-    .tShirt-right-side-bigImage {}
+    .tShirt-right-side-bigImage {
+      position: relative;
+
+      //? left LINE
+      //? left LINE
+      .tShirt-right-side-line {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        position: absolute;
+        top: 71px;
+        left: -164px;
+
+        .text {
+          margin-right: 5px;
+        }
+
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #E5E5E5;
+
+        .line {
+          width: 56px;
+          border: 1px solid #E5E5E5;
+        }
+
+        .circle {
+          width: 10px;
+          height: 10px;
+          background: #A6E1FF;
+          box-shadow: 0px 0px 12px 5px #42C0FF;
+          border-radius: 5px;
+        }
+      }
+
+      //? right LINE
+      //? right Top
+      .tShirt-right-side-line-right-top {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        position: absolute;
+        transform: translate(300px,-455px);
+
+        .text {
+          margin-right: 5px;
+        }
+
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #E5E5E5;
+
+        .line {
+          width: 56px;
+          border: 1px solid #E5E5E5;
+        }
+
+        .circle {
+          width: 10px;
+          height: 10px;
+          background: #A6E1FF;
+          box-shadow: 0px 0px 12px 5px #42C0FF;
+          border-radius: 5px;
+        }
+      }
+      //? right Bottom
+      .tShirt-right-side-line-right-bottom {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        position: absolute;
+        transform: translate(275px,-95px);
+
+        .text {
+          margin-right: 5px;
+        }
+
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #E5E5E5;
+
+        .line {
+          width: 56px;
+          border: 1px solid #E5E5E5;
+        }
+
+        .circle {
+          width: 10px;
+          height: 10px;
+          background: #A6E1FF;
+          box-shadow: 0px 0px 12px 5px #42C0FF;
+          border-radius: 5px;
+        }
+      }
+    }
 
     .tShirt-right-side-choseImage {
       display: flex;
       flex-direction: row;
       align-items: center;
+
       a {
         margin-right: 25px;
       }

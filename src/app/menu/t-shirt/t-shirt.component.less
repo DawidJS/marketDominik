@@ -4,26 +4,35 @@
   display: flex;
   flex-direction: row;
   font-family: Saira;
-  margin-top: 100px;
   align-items: center;
   justify-content: space-around;
+
+
+
+  .scroll {
+    width: 60px;
+    flex: none;
+  }
 
   //! LEFT SIDE
   .tShirt-left-side {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.5vh;
+    flex: 1 1 40%;
+    padding: 0 160px;
 
     div {
       margin-bottom: 25px;
     }
 
     .tShirt-left-side-mainInfo {
-      width: 426px;
 
       h2 {
         color: #E5E5E5;
         font-weight: 500px;
-        font-size: 48px;
+        font-size: 3em;
         line-height: 76px;
       }
 
@@ -37,7 +46,7 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-evenly;
 
       .tShiirt-left-side-firtsButton {
         background-color: #0193DC;
@@ -49,6 +58,7 @@
         color: #E5E5E5;
         line-height: 150%;
         border: none;
+        margin-right: 15px;
       }
 
       .tShiirt-left-side-secendButton {
@@ -58,7 +68,7 @@
         font-family: Open Sans;
         font-style: normal;
         font-weight: normal;
-        font-size: 16px;
+        font-size: 1em;
         line-height: 29px;
         color: #E5E5E5;
         border: 1px solid #E5E5E5;
@@ -70,13 +80,13 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-evenly;
 
       .tShirt-left-side-size-sizer {
         font-family: Open Sans;
         font-style: normal;
         font-weight: 600;
-        font-size: 16px;
+        font-size: 1em;
         line-height: 24px;
         color: #E5E5E5;
       }
@@ -85,7 +95,7 @@
         font-family: Open Sans;
         font-style: normal;
         font-weight: 600;
-        font-size: 16px;
+        font-size: 1em;
         line-height: 24px;
         color: #E5E5E5;
         letter-spacing: 3px;
@@ -95,9 +105,10 @@
         font-family: Open Sans;
         font-style: normal;
         font-weight: 600;
-        font-size: 16px;
+        font-size: 1em;
         line-height: 24px;
         color: #42C0FF;
+        margin-left: 105px;
       }
     }
   }
@@ -107,122 +118,93 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1 1 40%;
+    padding: 30px;
+
 
     .tShirt-right-side-bigImage {
       position: relative;
+    }
 
-      //? left LINE
-      //? left LINE
-      .tShirt-right-side-line {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-        position: absolute;
-        top: 71px;
-        left: -164px;
+    //? right Bottom
+    .tShirt-tip {
+      transition: transform 0.5s;
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
 
-        .text {
-          margin-right: 5px;
-        }
-
-        font-family: Open Sans;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 24px;
-        color: #E5E5E5;
-
-        .line {
-          width: 56px;
-          border: 1px solid #E5E5E5;
-        }
-
-        .circle {
-          width: 10px;
-          height: 10px;
-          background: #A6E1FF;
-          box-shadow: 0px 0px 12px 5px #42C0FF;
-          border-radius: 5px;
-        }
+      &.reversed {
+        flex-direction: row-reverse;
       }
 
-      //? right LINE
-      //? right Top
-      .tShirt-right-side-line-right-top {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-        position: absolute;
-        transform: translate(300px,-455px);
 
-        .text {
-          margin-right: 5px;
-        }
-
-        font-family: Open Sans;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 24px;
-        color: #E5E5E5;
-
-        .line {
-          width: 56px;
-          border: 1px solid #E5E5E5;
-        }
-
-        .circle {
-          width: 10px;
-          height: 10px;
-          background: #A6E1FF;
-          box-shadow: 0px 0px 12px 5px #42C0FF;
-          border-radius: 5px;
-        }
+      .text {
+        margin-right: 5px;
       }
-      //? right Bottom
-      .tShirt-right-side-line-right-bottom {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-        position: absolute;
-        transform: translate(275px,-95px);
 
-        .text {
-          margin-right: 5px;
-        }
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: #E5E5E5;
 
-        font-family: Open Sans;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 24px;
-        color: #E5E5E5;
+      .line {
+        width: 56px;
+        border: 1px solid #E5E5E5;
+      }
 
-        .line {
-          width: 56px;
-          border: 1px solid #E5E5E5;
-        }
-
-        .circle {
-          width: 10px;
-          height: 10px;
-          background: #A6E1FF;
-          box-shadow: 0px 0px 12px 5px #42C0FF;
-          border-radius: 5px;
-        }
+      .circle {
+        width: 10px;
+        height: 10px;
+        background: #A6E1FF;
+        box-shadow: 0px 0px 12px 5px #42C0FF;
+        border-radius: 5px;
       }
     }
+
 
     .tShirt-right-side-choseImage {
       display: flex;
       flex-direction: row;
       align-items: center;
+      flex-wrap: nowrap;
 
-      a {
-        margin-right: 25px;
+      .tShirt-arrow {
+        flex: none;
+        width: 40px;
+      }
+      .images {
+        flex: 1 1 auto;
+        overflow-x: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        scroll-snap-type: mandatory;
+        max-width: 260px;
+
+        &::-webkit-scrollbar {
+         display: none;
+
+        }
+
+        img {
+
+          margin-right: 25px;
+          opacity: 0.4;
+          transition: opacity 0.5s;
+          height: 80px;
+
+          &.active {
+            opacity: 1;
+
+          }
+        }
+
       }
     }
   }

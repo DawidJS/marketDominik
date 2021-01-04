@@ -6,11 +6,8 @@
   <!--! LEFT SIDE -->
   <div class="tShirt-left-side">
     <div class="tShirt-left-side-mainInfo">
-      <h2 class="tShirt-left-side-mainH">T-SHIRT</h2>
-      <p class="tShirt-left-side-mainP">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi ullam
-        aspernatur qui possimus sapiente nobis
-        libero ipsum eaque. Reiciendis iusto blanditiis non aut perspiciatis laboriosam voluptas voluptatem expedita
-        itaque quidem!</p>
+      <h2 class="tShirt-left-side-mainH">{{currentTShirt?.name}}</h2>
+      <p class="tShirt-left-side-mainP">{{currentTShirt?.description}}</p>
     </div>
     <!-- SIZE -->
     <div class="tShirt-left-side-endButton">
@@ -31,43 +28,25 @@
   <div class="tShirt-right-side">
     <!--* big image -->
     <div class="tShirt-right-side-bigImage">
-      <div [ngSwitch]='number'>
-        <div *ngSwitchCase=" '1' "><img src="../../../assets/image 13.png" alt="BIG IMAGE1"></div>
-        <div *ngSwitchCase=" '2' "><img src="../../../assets/image 13.png" alt="BIG IMAGE2"></div>
-        <div *ngSwitchCase=" '3' "><img src="../../../assets/image 13.png" alt="BIG IMAGE3"></div>
-      </div>
-      <!--* left line -->
-      <div class="tShirt-right-side-line">
-        <div class="text">Lorem ipsum dolor</div>
-        <div class="line"></div>
-        <div class="circle"></div>
-      </div>
-      <!-- TOP -->
-      <div class="tShirt-right-side-line-right-top">
-        <div class="circle"></div>
-        <div class="line"></div>
-        <div class="text">Lorem ipsum dolor</div>
-      </div>
-      <!-- Bottom -->
-      <div class="tShirt-right-side-line-right-bottom">
-        <div class="circle"></div>
-        <div class="line"></div>
-        <div class="text">Lorem ipsum dolor</div>
-      </div>
+      <img src="{{currentTShirt?.image}}" alt="BIG IMAGE">
     </div>
-    <!--* smaller image -->
+
+    <div *ngFor="let tip of currentTShirt?.tips; trackBy: trackByIndex" class="tShirt-tip"
+      [ngStyle]="{'transform': 'translate('+tip.position.x+'px,'+tip.position.y+'px)'}"
+      [class.reversed]="tip.side=='left'">
+      <div class="circle"></div>
+      <div class="line"></div>
+      <div class="text">{{tip.text}}</div>
+    </div>
+
+    <!--* carousel -->
     <div class="tShirt-right-side-choseImage">
-      <a class="tShirt-arrow-left"><img src="../../../assets/Vector.png" alt="left"></a>
-      <a (click)='choseNumber(1)'>
-        <div [ngClass]='{"active": number==1}'><img src="../../../assets/image 15.png" alt="small IMAGE1"></div>
-      </a>
-      <a (click)='choseNumber(2)'>
-        <div [ngClass]='{"active": number==2}'><img src="../../../assets/image 16.png" alt="small IMAGE1"></div>
-      </a>
-      <a (click)='choseNumber(3)'>
-        <div [ngClass]='{"active": number==3}'><img src="../../../assets/image 17.png" alt="small IMAGE1"></div>
-      </a>
-      <a class="tShirt-arrow-right"><img src="../../../assets/Vector (1).png" alt="right"></a>
+      <div class="tShirt-arrow"><img src="../../../assets/Vector.png" alt="left"></div>
+      <div class="images">
+        <img *ngFor="let shirt of tShirts" [class.active]="currentTShirt==shirt" src="{{shirt.image}}"
+          (click)="currentTShirt=shirt" alt="small IMAGE1">
+      </div>
+      <div class="tShirt-arrow"><img src="../../../assets/Vector (1).png" alt="right"></div>
     </div>
   </div>
 </section>

@@ -1,38 +1,34 @@
 @import '../../app/styles/restet.less';
 
-a {
-  &:visited {
-    color: white;
-  }
-
-  &:hover {
-    text-decoration: underline;
-  }
-
-  &:active {
-    color: #0193DC;
-
-  }
-}
 
 nav {
   display: flex;
   flex-direction: row;
-  background-color: #192134;
   align-items: center;
+  justify-content: flex-end;
   color: #E5E5E5;
   font-size: 16px;
+  height: 60px;
+  margin-top: 35px;
+  margin-right: 75px;
+  background: url("../../assets/ion_logo-electron.png");
+  background-size: 50px;
+  background-position: 125px 0px;
+  background-repeat: no-repeat;
 
-  .menu-logo {
-    width: 50%;
-    padding-left: 50px;
-    margin-left: 145px;
+  a {
+    margin-left: 50px;
+    &:visited {
+      color: white;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: #0193DC;
+    }
   }
 
-  .menu-nav {
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
 }

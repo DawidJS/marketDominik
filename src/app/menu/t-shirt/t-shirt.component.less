@@ -176,6 +176,7 @@
         flex: none;
         width: 40px;
       }
+
       .images {
         flex: 1 1 auto;
         overflow-x: auto;
@@ -186,9 +187,11 @@
         flex-wrap: nowrap;
         scroll-snap-type: mandatory;
         max-width: 260px;
+        width: 260px;
+        height: 50px;
 
         &::-webkit-scrollbar {
-         display: none;
+          display: none;
 
         }
 
@@ -206,6 +209,32 @@
         }
 
       }
+    }
+  }
+}
+
+//! RWD
+//! RWD
+//! RWD
+
+@media only screen and (max-width: 1300px) {
+  .tShirt {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    .scroll {
+      display: none;
+    }
+
+    .tShirt-left-side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tShirt-left-side-mainInfo {
+      text-align: center;
     }
   }
 }

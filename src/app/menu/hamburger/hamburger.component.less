@@ -1,0 +1,107 @@
+@body-color: transparent;
+@hamburger-color: #fff;
+
+
+//!Hamburger button
+
+.hamburger {
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: @body-color;
+  margin: 0;
+  border: none;
+  transition: transform .3s ease-in-out .1s;
+
+  .hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+    background-color: @body-color;
+
+    .hamburger-inner {
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: @hamburger-color;
+
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      transition: background-color 1s ease-in-out .1s;
+
+      &::before,
+      &::after {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: @hamburger-color;
+        content: "";
+        left: 0;
+
+        transition: transform 1s ease-in-out;
+      }
+
+      &::before {
+        top: -10px;
+      }
+
+      &::after {
+        bottom: -10px;
+      }
+    }
+  }
+}
+
+//! krzyzyk
+.hamburger-active {
+  transform: translateX(0px);
+  .hamburger-inner {
+    background-color: transparent !important;
+
+    &::before {
+      transform: translateY(10px) rotate(45deg);
+    }
+
+    &::after {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+}
+
+//!nawigacja
+
+.navigation {
+  height: 100vh;
+  width: 250px;
+  background-color: @body-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-250px);
+  transition: transform .3s ease-in-out .1s;
+
+  .navigation-list {
+    list-style: none;
+    margin-top: 50px;
+
+    .navigation-item {
+      margin-bottom: 20px;
+
+      a {
+        text-decoration: none;
+        color: @hamburger-color;
+      }
+    }
+  }
+}
+
+.navigation-active {
+  transform: translateX(0);
+}
+
+@media only screen and (max-width: 1300px) {
+
+}

@@ -13,6 +13,10 @@ import { SmthComponent } from './menu/smth/smth.component';
 import { AboutComponent } from './menu/about/about.component';
 import { SocialComponent } from './social/social.component';
 
+import { NgScrollbarModule } from 'ngx-scrollbar';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+import { HamburgerComponent } from './menu/hamburger/hamburger.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,11 +27,16 @@ import { SocialComponent } from './social/social.component';
     CapComponent,
     SmthComponent,
     AboutComponent,
-    SocialComponent
+    SocialComponent,
+    HamburgerComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgScrollbarModule,
+    NgbModule,
+    NgbPaginationModule,
+    NgbAlertModule
   ],
   providers: [],
   bootstrap: [AppComponent]

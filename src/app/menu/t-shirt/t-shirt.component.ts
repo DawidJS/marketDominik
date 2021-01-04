@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./t-shirt.component.less'],
 })
 export class TShirtComponent implements OnInit {
+
   public tShirts: TShirt[] = [
     {
       id: '1',
@@ -68,7 +69,7 @@ export class TShirtComponent implements OnInit {
     {
       id: '4',
       image: '../../../assets/shirt1.png',
-      name: 'T-SHIRT 1',
+      name: 'T-SHIRT 4',
       tips: [
         {
           side: 'left',
@@ -92,7 +93,7 @@ export class TShirtComponent implements OnInit {
     {
       id: '5',
       image: '../../../assets/shirt1.png',
-      name: 'T-SHIRT 1',
+      name: 'T-SHIRT 5',
       tips: [
         {
           side: 'left',
@@ -112,7 +113,7 @@ export class TShirtComponent implements OnInit {
       ],
       description:
         'Lorem1111, ipsum dolor sit amet consectetur adipisicing elit. Excepturi ullam aspernatur qui possimus sapiente nobis libero ipsum eaque. Reiciendis iusto blanditiis non aut perspiciatis laboriosam voluptas voluptatem expedita itaque quidem!',
-    }
+    },
   ];
 
   currentTShirt?: TShirt = this.tShirts[1];
@@ -121,13 +122,8 @@ export class TShirtComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  // tslint:disable-next-line:typedef
-  choseTShirt(shirt: TShirt) {
-    this.currentTShirt = shirt;
-    console.log(shirt);
-  }
-
   trackByIndex = (index: number): number => index;
+
 }
 
 export interface TShirt {

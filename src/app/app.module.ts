@@ -13,7 +13,7 @@ import { SmthComponent } from './menu/smth/smth.component';
 import { AboutComponent } from './menu/about/about.component';
 import { SocialComponent } from './social/social.component';
 
-import { NgScrollbarModule } from 'ngx-scrollbar';
+import { NgScrollbarModule } from 'ngx-scrollbar-v8';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 import { HamburgerComponent } from './menu/hamburger/hamburger.component';

@@ -1,16 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
+import { NgScrollbar } from 'ngx-scrollbar';
 
 @Component({
   selector: 'app-t-shirt',
   templateUrl: './t-shirt.component.html',
   styleUrls: ['./t-shirt.component.less'],
 })
-export class TShirtComponent implements OnInit {
+export class TShirtComponent implements AfterViewInit {
+  @ViewChild('scroll') scrollbar: ElementRef | undefined;
 
   public tShirts: TShirt[] = [
     {
       id: '1',
-      image: '../../../assets/shirt1.png',
+      image: '../../../assets/shirt.png',
       name: 'T-SHIRT 1',
       tips: [
         {
@@ -34,7 +42,7 @@ export class TShirtComponent implements OnInit {
     },
     {
       id: '2',
-      image: '../../../assets/shirt2.png',
+      image: '../../../assets/shirt.png',
       name: 'T-SHIRT 2',
 
       tips: [
@@ -68,7 +76,7 @@ export class TShirtComponent implements OnInit {
     },
     {
       id: '4',
-      image: '../../../assets/shirt1.png',
+      image: '../../../assets/shirt.png',
       name: 'T-SHIRT 4',
       tips: [
         {
@@ -92,7 +100,7 @@ export class TShirtComponent implements OnInit {
     },
     {
       id: '5',
-      image: '../../../assets/shirt1.png',
+      image: '../../../assets/shirt.png',
       name: 'T-SHIRT 5',
       tips: [
         {
@@ -116,14 +124,20 @@ export class TShirtComponent implements OnInit {
     },
   ];
 
+  ngAfterViewInit() {
+    console.log('INit', this.scrollbar);
+  }
+
+  scrollTo = (back: boolean) => {
+    if (this.scrollbar)
+      this.scrollbar.nativeElement.scrollBy({ left: back ? -80 : 80 });
+  };
+
   currentTShirt?: TShirt = this.tShirts[1];
 
   constructor() {}
 
-  ngOnInit(): void {}
-
   trackByIndex = (index: number): number => index;
-
 }
 
 export interface TShirt {

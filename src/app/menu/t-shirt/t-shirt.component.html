@@ -41,12 +41,14 @@
 
     <!--* carousel -->
     <div class="tShirt-right-side-choseImage">
-      <div class="tShirt-arrow"><img src="../../../assets/Vector.png" alt="left"></div>
-      <div class="images">
-        <img *ngFor="let shirt of tShirts" [class.active]="currentTShirt==shirt" src="{{shirt.image}}"
+      <div class="tShirt-arrow" (click)="scrollTo(true)"><img src="../../../assets/Vector.png" alt="left"></div>
+
+      <div class="images" #scroll>
+        <img *ngFor="let shirt of tShirts" id="{{shirt.id}}" [class.active]="currentTShirt==shirt" src="{{shirt.image}}"
           (click)="currentTShirt=shirt" alt="small IMAGE1">
       </div>
-      <div class="tShirt-arrow"><img src="../../../assets/Vector (1).png" alt="right"></div>
+
+      <div class="tShirt-arrow" (click)="scrollTo(false)" ><img src="../../../assets/Vector (1).png" alt="right"></div>
     </div>
   </div>
 

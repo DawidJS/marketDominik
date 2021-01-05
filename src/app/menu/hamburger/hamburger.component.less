@@ -58,6 +58,7 @@
 //! krzyzyk
 .hamburger-active {
   transform: translateX(0px);
+
   .hamburger-inner {
     background-color: transparent !important;
 
@@ -101,10 +102,10 @@
 
 .navigation-active {
   transform: translateX(0);
+  z-index: 1;
+  background-color: #192134;
 }
 
 @media only screen and (max-width: 1300px) {
-  .navigation {
-    z-index: 4;
-  }
+  .navigation {}
 }

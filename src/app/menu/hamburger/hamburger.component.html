@@ -1,11 +1,11 @@
 <div class="navigation navigation-active" [class.navigation-active]="show==true">
-  <ul class="navigation-list">
-    <li class="navigation-item"><a routerLink="home" routerLinkActive="active" (click)="toggle()">HOME</a></li>
-    <li class="navigation-item"><a routerLink="t-shirt" routerLinkActive="active" (click)="toggle()">T-SHIRT</a></li>
-    <li class="navigation-item"><a routerLink="jacket" routerLinkActive="active" (click)="toggle()">JACKET</a></li>
-    <li class="navigation-item"><a routerLink="cap" routerLinkActive="active" (click)="toggle()">CAP</a></li>
-    <li class="navigation-item"><a routerLink="smth" routerLinkActive="active" (click)="toggle()">SMTH</a></li>
-    <li class="navigation-item"><a routerLink="about" routerLinkActive="active" (click)="toggle()">ABOUT</a></li>
+  <ul>
+    <li><a routerLink="home" routerLinkActive="active" (click)="toggle()">HOME</a></li>
+    <li><a routerLink="t-shirt" routerLinkActive="active" (click)="toggle()">T-SHIRT</a></li>
+    <li><a routerLink="jacket" routerLinkActive="active" (click)="toggle()">JACKET</a></li>
+    <li><a routerLink="cap" routerLinkActive="active" (click)="toggle()">CAP</a></li>
+    <li><a routerLink="smth" routerLinkActive="active" (click)="toggle()">SMTH</a></li>
+    <li><a routerLink="about" routerLinkActive="active" (click)="toggle()">ABOUT</a></li>
   </ul>
 </div>
 <button [class.hamburger-active]="show==true" class="hamburger hamburger-active" (click)="toggle()">

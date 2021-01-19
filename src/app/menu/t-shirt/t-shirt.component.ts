@@ -23,17 +23,17 @@ export class TShirtComponent implements AfterViewInit {
       tips: [
         {
           side: 'left',
-          position: { x: -200, y: 70 },
+          position: { x: -16.2, y: 11.7 },
           text: 'aaaa kolniezyk',
         },
         {
           side: 'right',
-          position: { x: 50, y: 200 },
+          position: { x: 27.17, y: 35.4 },
           text: 'zajebista lamowka',
         },
         {
           side: 'right',
-          position: { x: 20, y: 400 },
+          position: { x: 27.2, y: 5.4 },
           text: 'brzydkin napis',
         },
       ],
@@ -48,12 +48,12 @@ export class TShirtComponent implements AfterViewInit {
       tips: [
         {
           side: 'left',
-          position: { x: -200, y: 70 },
+          position: { x: -12.2, y: 9.7 },
           text: 'super napis1',
         },
         {
           side: 'right',
-          position: { x: 170, y: 400 },
+          position: { x: 27.17, y: 35.4 },
           text: 'ladny napis1',
         },
       ],
@@ -67,7 +67,7 @@ export class TShirtComponent implements AfterViewInit {
       tips: [
         {
           side: 'right',
-          position: { x: 190, y: 250 },
+          position: { x: 27.17, y: 35.4 },
           text: 'napis super 3',
         },
       ],
@@ -81,17 +81,17 @@ export class TShirtComponent implements AfterViewInit {
       tips: [
         {
           side: 'left',
-          position: { x: 20, y: 100 },
+          position: { x: -16.2, y: 11.7 },
           text: 'bawelniany kolniezyk',
         },
         {
           side: 'right',
-          position: { x: 50, y: 200 },
+          position: { x: 27.17, y: 35.4 },
           text: 'zajebista lamowka',
         },
         {
           side: 'right',
-          position: { x: 20, y: 400 },
+          position: { x: 27.2, y: 5.4 },
           text: 'brzydkin napis',
         },
       ],
@@ -105,17 +105,17 @@ export class TShirtComponent implements AfterViewInit {
       tips: [
         {
           side: 'left',
-          position: { x: 20, y: 100 },
+          position: { x: -16.2, y: 11.7 },
           text: 'bawelniany kolniezyk',
         },
         {
           side: 'right',
-          position: { x: 50, y: 200 },
+          position: { x: 27.17, y: 35.4 },
           text: 'zajebista lamowka',
         },
         {
           side: 'right',
-          position: { x: 20, y: 400 },
+          position: { x: 27.2, y: 5.4 },
           text: 'brzydkin napis',
         },
       ],
@@ -129,8 +129,14 @@ export class TShirtComponent implements AfterViewInit {
   }
 
   scrollTo = (back: boolean) => {
-    if (this.scrollbar)
-      this.scrollbar.nativeElement.scrollBy({ left: back ? -80 : 80 });
+    if (this.scrollbar) {
+      var vmin =
+        (window.innerHeight < window.innerWidth
+          ? window.innerHeight
+          : window.innerWidth) / 100;
+
+      this.scrollbar.nativeElement.scrollBy({ left: (back ? -vmin : vmin) * 10 });
+    }
   };
 
   currentTShirt?: TShirt = this.tShirts[1];

@@ -34,7 +34,7 @@
     </div>
 
     <div *ngFor="let tip of currentTShirt?.tips; trackBy: trackByIndex" class="tShirt-tip"
-      [ngStyle]="{'transform': 'translate('+tip.position.x+'px,'+tip.position.y+'px)'}"
+      [ngStyle]="{'transform': 'translate('+tip.position.x+'vmin,'+tip.position.y+'vmin)'}"
       [class.reversed]="tip.side=='left'">
       <div class="circle"></div>
       <div class="line"></div>
@@ -43,14 +43,14 @@
 
     <!--* carousel -->
     <div class="tShirt-right-side-choseImage">
-      <div class="tShirt-arrow" (click)="scrollTo(true)"><img src="../../../assets/Vector.png" alt="left"></div>
+      <div class="tShirt-arrow left" (click)="scrollTo(true)"></div>
 
       <div class="images" #scroll>
         <img *ngFor="let shirt of tShirts" id="{{shirt.id}}" [class.active]="currentTShirt==shirt" src="{{shirt.image}}"
           (click)="currentTShirt=shirt" alt="small IMAGE1">
       </div>
 
-      <div class="tShirt-arrow" (click)="scrollTo(false)" ><img src="../../../assets/Vector (1).png" alt="right"></div>
+      <div class="tShirt-arrow right" (click)="scrollTo(false)" ></div>
     </div>
   </div>
 
